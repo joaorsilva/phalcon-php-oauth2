@@ -101,7 +101,7 @@ server {
   rewrite ^(.*)\#(.*)$ $1\?$2 last;
   
   # Web root directory
-  root /var/www/phalcon-php-oauth2/oauth2/public;
+  root /var/www/phalcon-php-oauth2/server/public;
   
   # Document index
   index index.php;
@@ -134,8 +134,8 @@ server {
   
   # Deny access to Apache's .htaccess files (cause we aren't using Apache2).
   location ~ /\.ht {
-		  deny all;
-	 }
+    deny all;
+  }
 }
 ```
 To speedup the configuration process just replace the `oauth2` word on this document with the `oauth2cli` word and save the file as as `oauth2cli`.
